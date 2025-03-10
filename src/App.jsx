@@ -1,14 +1,12 @@
-import React from "react"
-
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Index from './pages/Index'
-import About from './pages/About'
-import Career from './pagess/Career'
-import Events from './pages/Events'
-import Products from './pages/Products'
-import Support from './pages/Support'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Index from './pages/Index.jsx'
+import About from './pages/About.jsx'
+import Career from './pages/Career.jsx'
+import Events from './pages/Events.jsx'
+import Products from './pages/Products.jsx'
+import Support from './pages/Support.jsx'
 import './App.css'
 
 

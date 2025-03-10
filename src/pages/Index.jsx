@@ -2,9 +2,10 @@
 function Index() {
     return (
         <>
+     
             <h1>Index</h1>
         </>
     )
 }
 
-export default Index
+export default Index;

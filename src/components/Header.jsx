@@ -100,8 +100,8 @@ function Header() {
                 </div>
                 <div className="mobile-menu" id="mobileMenu">
                     <nav className="mobile-nav-links">
-                    <NavLink to='/'>Index</NavLink>
-                        <NavLink to='/'>About</NavLink>
+                    <NavLink to='/#'>Index</NavLink>
+                        <NavLink to='/about'>About</NavLink>
                         <NavLink to='/Carer'>Career</NavLink>
                         <NavLink to='/about'>Events</NavLink>
                         <NavLink to='/Features'>Products</NavLink>
