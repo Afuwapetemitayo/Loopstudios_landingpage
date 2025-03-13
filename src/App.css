@@ -1,7 +1,5 @@
-
-#root {
+ #root {
   max-width: 100vw;
-
 }  
 
 * {
@@ -10,110 +8,98 @@
   font-family: sans-serif;
 }
 
-
 body {
+  background-image: url('../public/images/desktop/image-hero.jpg');
   font-family: 'Poppins', sans-serif;
   color: white;
   line-height: 1.6;
   scroll-behavior: smooth;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
-
+/* Style for Header Starts here */
 
 header {
 color: rgb(255, 255, 255);
 position: sticky;
 top: 0;
 left: 0;
-height: 40px;
-max-height: 40px;
+height: 40px !important;
+max-height: 40px !important;
 z-index: 99999;
 padding: 0.7em 3.9em;
-max-height: 7vh;
 display: flex;
-justify-content: start;
+margin-top: 30px;
+justify-content: space-between;
 align-items: center;
 font-family: sans-serif;
-align-content: center;
 }
 
-.nav-holding{
-display:flex;
-justify-content: space-between;
+header.scrolled {
+  background-color: black;
+}
+
+header[style*="opacity: 0"] {
+transition: opacity 1s ease;
+}
+
+header[style*="opacity: 1"] {
+transform: translateY(0);
+transition: opacity 2s ease;
 }
 
 .logo {
-color:#000000;
-font-size: 30px;
-font-weight: bolder;
+color:#ffffff;
+font-size: 25px;
+font-weight: bold;
 cursor: pointer;
 }
 
 .nav-holding {
-  gap: 0 200px;
+  gap: 0 120px;
   display: flex;
   align-items: center;
 }
 
 .nav-links {
-  color: red;
-  display: flex;
-  justify-content: space-between;
-  gap: 13px;
-} 
+display: flex;
+justify-content: space-between;
+gap: 13px;
+}
 
 .nav-links > * {
 text-decoration: none;
 color: rgb(255, 255, 255);
 font-size: 13px;
-font-weight: bold;
-text-transform: uppercase;
 display: inline-block;
 position: relative;
 }
 
-.nav-links > *:hover {
-  color: #c5ff4b;
-}
-
-.active::after {
+.nav-links > *::after {
   content: "";
   display: block;
-  width: auto;
-  height: 3px;
-  background-color: #fff;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
   margin: 0 auto;
+  transition: width 0.3s;
 }
 
-.getstarted-button,
-.mobile-getstarted-button {
-  border: none;
-  padding: 10px 20px;
-  max-height: 7vh;
-  width: max-content;
-  color: #132D46;
-  background-color:#01C38D;
-  border-radius: 10px;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
+.nav-links > *:hover:after {
+  width: 100%;
 }
 
-.getstarted-button:hover,
-.mobile-getstarted-button:hover {
-  background-color: #c5ff4b;
+.nav-links > *.active::after {
+  width: 90%;
+  transition: width 0.3s;
 }
 
-.mobile-getstarted-button-div {
-  padding-bottom: 30px;
-} 
-
-
+/* Style for Hamburger Starts Here */
 
 .hamburger {
 display: none;
@@ -135,6 +121,7 @@ transition: all 0.3s ease-in-out;
 
 .hamburger.active span:nth-child(1) {
 transform: translateY(7px) rotate(45deg);
+/* background-color: greenyellow; */
 }
 
 .hamburger.active span:nth-child(2) {
@@ -143,6 +130,7 @@ opacity: 0;
 
 .hamburger.active span:nth-child(3) {
 transform: translateY(-7px) rotate(-45deg);
+/* background-color: greenyellow; */
 }
 
 .mobile-menu {
@@ -151,6 +139,7 @@ top: 60px;
 right: 0;
 width: 25%;
 height: 0;
+/* background: rgba(0, 0, 0, 0.9); */
 background: linear-gradient(to bottom right, rgb(54, 53, 54), black, rgb(54, 53, 54));
 overflow: hidden;
 z-index: 999;
@@ -196,7 +185,7 @@ text-decoration: none;
   color: #c5ff4b;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 960px) {
   header {
       padding: 0.7em 2.3em;
   }
@@ -225,4 +214,3 @@ text-decoration: none;
       width: 35%;
   }
 }
-

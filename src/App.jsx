@@ -12,11 +12,12 @@ import './App.css'
 
 function App() {
   
+  
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Header />
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
